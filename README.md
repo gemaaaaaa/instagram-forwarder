@@ -25,7 +25,7 @@
 ##  Overview
 
 
-The  **Instagram Story and Post Forwarder**  is a Python script designed to automate the process of downloading Instagram stories and forwarding new posts to a Discord channel via webhooks powered by the `instagrapi` library. 
+**Instagram Post and Stories Forwarder**  is a Python script designed to automate the process of downloading Instagram stories and forwarding new posts to a Discord channel via webhooks powered by the `instagrapi` library. 
 
 
 ##  Features
