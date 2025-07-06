@@ -17,6 +17,7 @@
 
 - [ Overview](#overview)
 - [ Features](#features)
+- [ Architecture](#architecture)
 - [ Getting Started](#getting-started)
   - [ Installation](#installation)
   - [ Usage](#usage)
@@ -24,15 +25,32 @@
 
 ##  Overview
 
-
-**Instagram Posts and Stories Forwarder**  is a Python script designed to automate the process of downloading Instagram stories and forwarding new posts to a Discord channel via webhooks powered by the `instagrapi` library. 
+**Instagram Posts and Stories Forwarder** is a Python script designed to automate the process of downloading Instagram stories and forwarding new posts to a Discord channel via webhooks powered by the `instagrapi` library. 
 
 
 ##  Features
 
--    **Discord Integration**: Sends posts and stories as files and post URLs as messages, complete with user information (profile picture and name).
+- **Discord Integration**: Sends posts and stories as files and post URLs as messages, complete with user information (profile picture and name).
      
--   **Session Management**: Saves Instagram login sessions to avoid frequent re-authentication.
+- **Session Management**: Saves Instagram login sessions to avoid frequent re-authentication.
+
+- **Modular Architecture**: Well-organized code structure for better maintainability.
+
+- **Configurable**: Easy to configure via environment variables or .env file.
+
+##  Architecture
+
+The application follows a modular architecture:
+
+- **client**: Handles Instagram API interactions.
+  
+- **config**: Manages configuration loading and environment variables.
+  
+- **discord**: Handles Discord webhook operations.
+  
+- **storage**: Manages file operations and data persistence.
+  
+- **utils**: Contains utility functions and the main forwarder logic.
 
 ##  Getting Started
 
@@ -58,10 +76,20 @@ Install instagram-forwarder using one of the following methods:
 ❯ pip install -r requirements.txt
 ```
 
+### Configuration
 
+Create a `.env` file in the project root with the following variables:
 
+```
+INSTAGRAM_USERNAME=your_instagram_username
+INSTAGRAM_PASSWORD=your_instagram_password
+DISCORD_WEBHOOK_URL_1=your_discord_webhook_url_1
+DISCORD_WEBHOOK_URL_2=your_discord_webhook_url_2  # Optional
+```
 
 ###  Usage
 ```sh
 ❯ python main.py
 ```
+
+When prompted, enter the Instagram username you want to monitor, and the application will start forwarding their posts and stories to Discord.
