@@ -76,17 +76,6 @@ Install instagram-forwarder using one of the following methods:
 ❯ pip install -r requirements.txt
 ```
 
-### Configuration
-
-Create a `.env` file in the project root with the following variables:
-
-```
-INSTAGRAM_USERNAME=your_instagram_username
-INSTAGRAM_PASSWORD=your_instagram_password
-DISCORD_WEBHOOK_URL_1=your_discord_webhook_url_1
-DISCORD_WEBHOOK_URL_2=your_discord_webhook_url_2  # Optional
-```
-
 ###  Usage
 ```sh
 ❯ python main.py
