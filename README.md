@@ -9,18 +9,8 @@
 <p align="center">Built with the tools and technologies:</p>
 <p align="center">
 	<img src="https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white" alt="Python">
-	<img src="https://img.shields.io/badge/Pydantic-E92063.svg?style=for-the-badge&logo=Pydantic&logoColor=white" alt="Pydantic">
 </p>
 <br>
-
-##  Table of Contents
-
-- [ Overview](#overview)
-- [ Features](#features)
-- [ Architecture](#architecture)
-- [ Getting Started](#getting-started)
-  - [ Installation](#installation)
-  - [ Usage](#usage)
 
 
 ##  Overview
@@ -33,8 +23,6 @@
 - **Discord Integration**: Sends posts and stories as files and post URLs as messages, complete with user information (profile picture and name).
      
 - **Session Management**: Saves Instagram login sessions to avoid frequent re-authentication.
-
-- **Modular Architecture**: Well-organized code structure for better maintainability.
 
 - **Configurable**: Easy to configure via environment variables or .env file.
 
@@ -62,23 +50,47 @@ Install instagram-forwarder using one of the following methods:
 
 1. Clone the instagram-forwarder repository:
 ```sh
-❯ git clone https://github.com/gemaaaaaa/instagram-forwarder
+git clone https://github.com/gemaaaaaa/instagram-forwarder
 ```
 
 2. Navigate to the project directory:
 ```sh
-❯ cd instagram-forwarder
+cd instagram-forwarder
 ```
 
-3. Install the project dependencies:
+3. (Recommended) Create and activate a virtual environment:
+
+On Unix/Mac:
+```sh
+python3 -m venv venv
+source venv/bin/activate
+```
+On Windows:
+```powershell
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+4. Install the project dependencies:
 
 ```sh
-❯ pip install -r requirements.txt
+pip install -r requirements.txt
+```
+
+5. Copy the example environment file:
+
+On Unix/Mac:
+```sh
+cp .env.example .env
+```
+On Windows:
+```powershell
+copy .env.example .env
 ```
 
 ###  Usage
 ```sh
-❯ python main.py
+python main.py
 ```
 
 When prompted, enter the Instagram username you want to monitor, and the application will start forwarding their posts and stories to Discord.
